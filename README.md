@@ -11,3 +11,9 @@ Game 3 - gra 2 we Flasku
 lotto - gracz typuje 6 liczb z przedzialu 1-49. Komputer losuje 6 liczb i sprawdza czy gracz wygral.
 
 Dice - symulator rzutu koscmi, mozna wybrac ilosc kosci, typ kosci, modyfikator. Program zwroci sume wyrzuconych oczek.
+
+gra 2001 - gracz i komputer rzucaj 2 koscmi.
+
+gra 2001v2 - gracz moze wybrac ilosc kosci (1-4) ktora wykona rzut, komputer losuje ilosc kosci (1-4)
+
+gra 2001v3 - gracz moze wybrac ilosc oraz rodzaj kosci, komputer losuje ilosc (1-10) i typ kosci (7 do wyboru)
