@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zgadnij liczbe</title>
+</head>
+<body>
+    <h1>Czy to jest liczba {{ guess }} ?</h1>
+    <form action="" method="POST">
+        <input type="submit" name="user_answer" value="Za duzo">
+        <input type="submit" name="user_answer" value="Za malo">
+        <input type="submit" name="user_answer" value="Wygrales">
+        <input type="hidden" name="min" value="{{ min }}">
+        <input type="hidden" name="max" value="{{ max }}">
+        <input type="hidden" name="guess" value="{{ guess }}">
+    </form>
+
+</body>
+</html>
