@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gra w 2001v2</title>
+</head>
+<body>
+    <h1>Wynik gracza {{player}}</h1>
+    <h1>Wynik komputera {{computer}}</h1>
+    <form action="" method="POST">
+        <input type="hidden" name="player" value="{{ player }}">
+        <input type="hidden" name="computer" value="{{ computer }}">
+        <input type="submit" name="user_choice" value="1 Dice">
+        <input type="submit" name="user_choice" value="2 Dices">
+        <input type="submit" name="user_choice" value="3 Dices">
+        <input type="submit" name="user_choice" value="4 Dices">
+    </form>
+
+</body>
+</html>
