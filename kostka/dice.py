@@ -10,6 +10,14 @@ z - modyfikator +/- wartosc
 
 
 def dice_type(code):
+    """funkcja dzieli wprowadzony lancych kodu kosci na czesci
+    z ktorych mozna zaimportowac dane do dalszych obliczen
+
+    xDy + z
+    split dzieli lancuch na 3 czesci:
+    x - liczbe kosci
+    Dy - typ kosci
+    z - modyfikator"""
     possible_dices = ("D3", "D4", "D6", "D8", "D12", "D20", "D100")
     for i in possible_dices:
         if i in code:
@@ -18,6 +26,7 @@ def dice_type(code):
 
 
 def roll(data):
+    """Symulacja rzutu kosci oraz wykonanie obliczen"""
     result = []
     try:
         n = int(dice_type(data)[1][1:])

@@ -1,6 +1,14 @@
 import random
 
 def dice_type(code):
+    """funkcja dzieli wprowadzony lancych kodu kosci na czesci
+    z ktorych mozna zaimportowac dane do dalszych obliczen
+
+    xDy + z
+    split dzieli lancuch na 3 czesci:
+    x - liczbe kosci
+    Dy - typ kosci
+    z - modyfikator"""
     possible_dices = ("D3", "D4", "D6", "D8", "D12", "D20", "D100")
     for i in possible_dices:
         if i in code:
@@ -9,6 +17,7 @@ def dice_type(code):
 
 
 def multi(score):
+    """funkcja modyfikuje wynik przy rzucie 7 i 11"""
     roll = roll_dice()
     if roll == 7:
         return score // 7
@@ -19,6 +28,8 @@ def multi(score):
 
 
 def roll_dice():
+    """symulacja rzutu kostkami oraz zsumowanie wyniku
+    gracz wybiera typ oraz ilosc kosci"""
     result = []
     print("Podaj kod kosci jaka chcesz rzucic xDy")
     data = input("Mozliwe kosci to: D3, D4, D6, D12, D20, D100 ")
@@ -38,6 +49,7 @@ def roll_dice():
 
 
 def multi_computer(score):
+    """funkcja modyfikuje wynik przy rzucie 7 i 11 dla komputera"""
     roll = roll_dice_computer()
     if roll == 7:
         return score // 7
@@ -48,6 +60,8 @@ def multi_computer(score):
 
 
 def roll_dice_computer():
+    """symulacja rzutu kostkami oraz zsumowanie wyniku
+    komputer losuje typ oraz ilosc kosci"""
     result = []
     lista = [3, 4, 6, 8, 12, 20, 100]
     n = random.choice(lista)
@@ -60,6 +74,9 @@ def roll_dice_computer():
 
 
 def main():
+    """glowna funkcja,
+    porownuje symulacje rzutow dla komputera i gracza,
+    kto pierwszy spelni warunki wygrywa."""
     player = 0
     computer = 0
     input("Witam w grze 2001, zaczynamy?")

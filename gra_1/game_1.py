@@ -2,6 +2,8 @@ import random
 
 
 def guess_number(player_no=0):
+    """Gracz podaje liczbe a komputer podpowiada czy za duzo czy za malo,
+    jesli gracz zgadnie wyswietli 'wygrales'"""
     computer_no = random.randint(1, 100)
     guess = 0
     while player_no != computer_no:

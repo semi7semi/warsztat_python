@@ -1,4 +1,5 @@
 def player():
+    """Zadaje pytanie i oczekuje na jedna 3 mozliwych odpowiedzi"""
     choices = ["za duzo", "za malo", "zgadles"]
     player = None
     while player not in choices:
@@ -10,6 +11,7 @@ def player():
 
 
 def guess1000():
+    """glowna funkcja, zgaduje w 10 probach liczbe"""
     min = 0
     max = 1000
     input("Czy pomyslales juz liczbe?")

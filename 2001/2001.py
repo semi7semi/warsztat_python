@@ -1,6 +1,7 @@
 import random
 
 def multi(score):
+    """funkcja modyfikuje wynik przy rzucie 7 i 11"""
     roll = roll_dice()
     if roll == 7:
         return score // 7
@@ -11,6 +12,7 @@ def multi(score):
 
 
 def roll_dice():
+    """symulacja rzutu koscmi oraz zsumowanie wyniku"""
     result = []
     for _ in range(2):
         dice_value = random.randint(1, 6)
@@ -20,6 +22,9 @@ def roll_dice():
 
 
 def main():
+    """glowna funkcja,
+    porownuje symulacje rzutow dla komputera i gracza,
+    kto pierwszy spelni warunki wygrywa."""
     player = 0
     computer = 0
     input("Witam w grze 2001, zaczynamy?")
