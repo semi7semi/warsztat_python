@@ -19,14 +19,11 @@ def multi(score, x):
 def roll_dice(x):
     """symulacja rzutu koscmi oraz zsumowanie wyniku"""
     result = []
-    if x > 5 or x < 1:
-        return "mozesz wybrac tylko 1 - 4 kosci"
-    else:
-        for _ in range(x):
-            dice_value = random.randint(1, 6)
-            result.append(dice_value)
-        print(result)
-        return sum(result)
+    for _ in range(x):
+        dice_value = random.randint(1, 6)
+        result.append(dice_value)
+    print(result)
+    return sum(result)
 
 
 def multi_computer(score):
@@ -51,7 +48,9 @@ def roll_dice_computer():
     print(result)
     return sum(result)
 
+
 def choices(user_choice):
+    """wybor ilosci kosci dla gracza"""
     if user_choice == "1 Dice":
         return 1
     elif user_choice == "2 Dices":
@@ -61,8 +60,12 @@ def choices(user_choice):
     else:
         return 4
 
+
 @app.route("/", methods=["GET", "POST"])
 def game():
+    """Główna funkcja. zlicza kolejne rzuty az
+    gracz lub komputer nie osiagna wymaganej wartosci.
+    Oglasza zwyciezce"""
     if request.method == "GET":
         return render_template("index2.html")
     else:
