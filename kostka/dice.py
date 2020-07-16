@@ -18,7 +18,7 @@ def dice_type(code):
     x - liczbe kosci
     Dy - typ kosci
     z - modyfikator"""
-    possible_dices = ("D3", "D4", "D6", "D8", "D12", "D20", "D100")
+    possible_dices = ("D100", "D20", "D12", "D10", "D8", "D6", "D4", "D3")
     for i in possible_dices:
         if i in code:
             prefix, sufix = code.split(i)
